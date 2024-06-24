@@ -1,36 +1,36 @@
-# LLM Use Cases
+# Mastering LLMs: A Comprehensive Tutorial and Use Cases
 
-Welcome to the LLM Use Cases repository! This repository contains a series of Jupyter notebooks that guide you through building various applications using Large Language Models (LLMs). Each notebook covers a different aspect of LLM development, from basic applications to advanced techniques.
+Welcome to the **Mastering LLMs** repository! This repository contains a series of Jupyter notebooks designed to guide you through building various applications using Large Language Models (LLMs). Each notebook covers a different aspect of LLM development, from basic applications to advanced techniques.
 
-## Notebooks
+## Notebooks Overview
 
-1. **Create a Basic LLM Application**
-   - Learn how to create a simple LLM application using OpenAI's GPT-3 model.
-   - [Notebook Link](./1._Create_a_Basic_LLM_Application.ipynb)
+### 1. Create a Basic LLM Application
+- **Objective:** Create a simple application using OpenAI's GPT-4 model to generate text from a prompt.
+- **Notebook:** [Create a Basic LLM Application](./1._Create_a_Basic_LLM_Application.ipynb)
 
-2. **Chain Prompts for Complex Tasks**
-   - Discover how to chain multiple prompts together to perform complex tasks.
-   - [Notebook Link](./2._Chain_Prompts_for_Complex_Tasks.ipynb)
+### 2. Chain Prompts for Complex Tasks
+- **Objective:** Learn how to connect multiple prompts for advanced objectives.
+- **Notebook:** [Chain Prompts for Complex Tasks](./2._Chain_Prompts_for_Complex_Tasks.ipynb)
 
-3. **Implement RAG (Retrieval-Augmented Generation)**
-   - Understand how to integrate external knowledge bases to enhance your models using Retrieval-Augmented Generation.
-   - [Notebook Link](./3._Implement_RAG_(Retrieval-Augmented_Generation).ipynb)
+### 3. Implement RAG (Retrieval-Augmented Generation)
+- **Objective:** Integrate external knowledge bases to enhance your models using Retrieval-Augmented Generation.
+- **Notebook:** [Implement RAG (Retrieval-Augmented Generation)](./3._Implement_RAG_(Retrieval-Augmented_Generation).ipynb)
 
-4. **Add Memory for Contextual Understanding**
-   - Learn how to enable memory in your models for better contextual understanding.
-   - [Notebook Link](./4._Add_Memory_for_Contextual_Understanding.ipynb)
+### 4. Add Memory for Contextual Understanding
+- **Objective:** Enable memory in your models for better contextual understanding.
+- **Notebook:** [Add Memory for Contextual Understanding](./4._Add_Memory_for_Contextual_Understanding.ipynb)
 
-5. **Interact with External Tools**
-   - Teach your LLMs to use APIs and other external resources.
-   - [Notebook Link](./5._Interact_with_External_Tools.ipynb)
+### 5. Interact with External Tools
+- **Objective:** Teach your LLMs to use APIs and other external resources.
+- **Notebook:** [Interact with External Tools](./5._Interact_with_External_Tools.ipynb)
 
-6. **Develop LLM Agents**
-   - Build agents capable of autonomous decision-making.
-   - [Notebook Link](./6._Develop_LLM_Agents.ipynb)
+### 6. Develop LLM Agents
+- **Objective:** Build agents capable of autonomous decision-making.
+- **Notebook:** [Develop LLM Agents](./6._Develop_LLM_Agents.ipynb)
 
-7. **Fine-Tune with PEFT Methods**
-   - Explore advanced techniques to fine-tune your models for specific tasks.
-   - [Notebook Link](./7._Fine-Tune_with_PEFT_Methods.ipynb)
+### 7. Fine-Tune with PEFT Methods
+- **Objective:** Explore advanced techniques to fine-tune your models for specific tasks.
+- **Notebook:** [Fine-Tune with PEFT Methods](./7._Fine-Tune_with_PEFT_Methods.ipynb)
 
 ## Getting Started
 
@@ -64,22 +64,26 @@ To run the notebooks, you need to have the following installed:
 
 2. Open the notebook you want to explore and follow the instructions inside.
 
-## Notebooks Overview
+## Detailed Instructions
 
 ### 1. Create a Basic LLM Application
-- **Objective:** Create a simple application using OpenAI's GPT-3 model to generate text from a prompt.
+- **Objective:** Create a simple application using OpenAI's GPT-4 model to generate text from a prompt.
 - **Code Overview:**
     ```python
     import openai
 
+    # Initialize OpenAI API
+    openai.api_key = 'your-api-key'
+
     def generate_text(prompt):
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-4",
             prompt=prompt,
             max_tokens=100
         )
         return response.choices[0].text.strip()
 
+    # Example usage
     prompt = "Once upon a time in a land far away,"
     result = generate_text(prompt)
     print(result)
@@ -89,9 +93,13 @@ To run the notebooks, you need to have the following installed:
 - **Objective:** Learn how to connect multiple prompts for advanced objectives.
 - **Code Overview:**
     ```python
+    import openai
+
+    openai.api_key = 'your-api-key'
+
     def generate_text(prompt):
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-4",
             prompt=prompt,
             max_tokens=100
         )
@@ -109,9 +117,13 @@ To run the notebooks, you need to have the following installed:
 - **Objective:** Integrate external knowledge bases to enhance your models using Retrieval-Augmented Generation.
 - **Code Overview:**
     ```python
+    import openai
+
+    openai.api_key = 'your-api-key'
+
     def generate_text(prompt):
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-4",
             prompt=prompt,
             max_tokens=100
         )
@@ -126,13 +138,16 @@ To run the notebooks, you need to have the following installed:
 - **Objective:** Enable memory in your models for better contextual understanding.
 - **Code Overview:**
     ```python
+    import openai
+
+    openai.api_key = 'your-api-key'
     conversation_history = []
 
     def generate_text_with_memory(prompt):
         conversation_history.append(prompt)
         combined_prompt = "\\n".join(conversation_history)
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-4",
             prompt=combined_prompt,
             max_tokens=100
         )
@@ -149,11 +164,14 @@ To run the notebooks, you need to have the following installed:
 - **Objective:** Teach your LLMs to use APIs and other external resources.
 - **Code Overview:**
     ```python
+    import openai
     import requests
+
+    openai.api_key = 'your-api-key'
 
     def generate_text(prompt):
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-4",
             prompt=prompt,
             max_tokens=100
         )
@@ -172,9 +190,13 @@ To run the notebooks, you need to have the following installed:
 - **Objective:** Build agents capable of autonomous decision-making.
 - **Code Overview:**
     ```python
+    import openai
+
+    openai.api_key = 'your-api-key'
+
     def decision_agent(prompt):
         response = openai.Completion.create(
-            engine="text-davinci-003",
+            engine="gpt-4",
             prompt=prompt,
             max_tokens=100
         )
