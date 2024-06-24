@@ -44,8 +44,8 @@ To run the notebooks, you need to have the following installed:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/rakeshparihar/llm-usecases.git
-    cd llm-usecases
+    git clone https://github.com/rakeshparihar/mastering-llms.git
+    cd mastering-llms
     ```
 
 2. Install the required packages:
